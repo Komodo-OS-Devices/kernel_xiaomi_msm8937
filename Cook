@@ -1,0 +1,8 @@
+make O=out ARCH=arm64 land_defconfig
+
+PATH="/home/gabrielsedev/clang/clang-4691093/bin:/home/gabrielsedev/tools/bin:${PATH}" \
+make -j8 O=out \
+                      ARCH=arm64 \
+                      CC=clang \
+                      CLANG_TRIPLE=aarch64-linux-gnu- \
+                      CROSS_COMPILE=aarch64-linux-android-
